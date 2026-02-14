@@ -2,13 +2,18 @@
 import { GoogleGenAI } from "@google/genai";
 
 export class GeminiService {
-  private ai: GoogleGenAI;
+  private ai: GoogleGenAI | null = null;
 
-  constructor() {
-    this.ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
+  private initializeAI() {
+    if (!this.ai) {
+      const apiKey = import.meta.env.VITE_GEMINI_API_KEY || '';
+      this.ai = new GoogleGenAI({ apiKey });
+    }
   }
 
   async getCareerAdvice(userInterests: string) {
+    this.initializeAI();
+    
     const prompt = `You are a professional career advisor at "hirstack", an elite IT training institute. 
     A prospective student is interested in: "${userInterests}".
     
@@ -22,6 +27,8 @@ export class GeminiService {
     Provide a concise, encouraging response (max 150 words) that explains WHY that path fits them and what the first step is. Use professional yet approachable tone.`;
 
     try {
+      if (!this.ai) throw new Error("API not initialized");
+      
       const response = await this.ai.models.generateContent({
         model: 'gemini-3-flash-preview',
         contents: prompt,
