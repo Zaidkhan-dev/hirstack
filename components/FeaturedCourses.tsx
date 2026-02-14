@@ -1,0 +1,82 @@
+
+import React from 'react';
+
+const courses = [
+  {
+    title: "Full Stack Development",
+    level: "All Levels",
+    duration: "6 Months",
+    image: "https://picsum.photos/seed/web/600/400",
+    price: "$2,499"
+  },
+  {
+    title: "AI & Machine Learning",
+    level: "Intermediate",
+    duration: "8 Months",
+    image: "https://picsum.photos/seed/ai/600/400",
+    price: "$3,200"
+  },
+  {
+    title: "Cloud Engineering",
+    level: "Advanced",
+    duration: "4 Months",
+    image: "https://picsum.photos/seed/cloud/600/400",
+    price: "$2,100"
+  },
+  {
+    title: "Cybersecurity Specialist",
+    level: "Beginner",
+    duration: "5 Months",
+    image: "https://picsum.photos/seed/sec/600/400",
+    price: "$2,800"
+  }
+];
+
+export const FeaturedCourses: React.FC = () => {
+  return (
+    <section id="courses" className="py-24 bg-slate-900/30">
+      <div className="container mx-auto px-6">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+          <div className="max-w-xl">
+            <h2 className="text-4xl font-bold mb-4">Explore Our Curated Tracks</h2>
+            <p className="text-slate-400">Handpicked industry specialist trainers are well-experienced to teach you any concept as easy as humanly possible.</p>
+          </div>
+          <button className="text-blue-400 font-bold hover:underline flex items-center gap-2">
+            View all courses
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+          </button>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {courses.map((course, idx) => (
+            <div key={idx} className="group glass-card rounded-2xl overflow-hidden hover:-translate-y-2 transition-all duration-300">
+              <div className="h-48 overflow-hidden relative">
+                <img src={course.image} alt={course.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                <div className="absolute top-4 left-4 px-3 py-1 bg-black/50 backdrop-blur-md rounded-full text-xs font-bold uppercase tracking-widest">{course.level}</div>
+              </div>
+              <div className="p-6">
+                <h4 className="text-xl font-bold mb-3">{course.title}</h4>
+                <div className="flex items-center gap-4 text-sm text-slate-500 mb-6">
+                  <span className="flex items-center gap-1">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    {course.duration}
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                    Live Labs
+                  </span>
+                </div>
+                <div className="flex justify-between items-center pt-6 border-t border-white/5">
+                  <span className="text-2xl font-bold text-blue-400">{course.price}</span>
+                  <button className="p-2 bg-blue-600/10 text-blue-500 rounded-lg hover:bg-blue-600 hover:text-white transition-colors">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" /></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
