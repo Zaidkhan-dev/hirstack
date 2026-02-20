@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
@@ -9,6 +8,7 @@ import { CareerAdvisor } from './components/CareerAdvisor';
 import { Testimonials } from './components/Testimonials';
 import { Footer } from './components/Footer';
 import { CustomCursor } from './components/CustomCursor';
+import { ChatBot } from './components/ChatBot';
 
 const App: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -33,6 +33,7 @@ const App: React.FC = () => {
         <CareerAdvisor />
         <Testimonials />
       </main>
+      <ChatBot />
       <Footer />
     </div>
   );

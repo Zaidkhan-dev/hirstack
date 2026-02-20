@@ -39,12 +39,12 @@ export const About: React.FC = () => {
           
           <div className="lg:w-1/2">
             <h2 className="text-blue-500 font-bold tracking-widest uppercase text-sm mb-4">Our Philosophy</h2>
-            <h3 className="text-4xl font-bold mb-6 leading-tight">Mastering Technical Brilliance</h3>
+            <h3 className="text-4xl font-bold mb-6 leading-tight">Empowering Minds Through Technical Excellence</h3>
             <p className="text-slate-400 text-lg mb-6 leading-relaxed">
-              We, the leading training institute in IT industry offer world-class teaching and top-notch training to help you learn and groom the technical ability in you. We provide best-in-class infrastructure, online resources, experience to real-time projects and unparalleled placement support.
+              We are a premier IT training institute committed to delivering industry-aligned, high-impact technical education. Our programs are engineered to bridge the gap between academic learning and real-world implementation, enabling students to develop strong analytical thinking, problem-solving capability, and hands-on technical expertise.
             </p>
             <p className="text-slate-400 text-lg mb-8 leading-relaxed">
-              We know the significance of having both a sound conceptual understanding and a expert mind, to perform efficiently. Our courses are carefully planned to impart maximum theoretical knowledge and to hone effective programming skills.
+              Our state-of-the-art infrastructure, advanced learning management systems, and access to curated digital resources create an immersive learning ecosystem. Through exposure to live industry projects, case studies, and real-time development environments, learners gain practical experience that mirrors professional IT workflows. In addition, our structured placement assistance program equips students with interview readiness, portfolio development, and career acceleration strategies.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
