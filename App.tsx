@@ -3,7 +3,7 @@ import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
 import { CourseModes } from './components/CourseModes';
-// import { FeaturedCourses } from './components/FeaturedCourses';
+import { FeaturedCourses } from './components/FeaturedCourses';
 // import { CareerAdvisor } from './components/CareerAdvisor';
 // import { Testimonials } from './components/Testimonials';
 // import { Footer } from './components/Footer';
@@ -29,6 +29,7 @@ const App: React.FC = () => {
         <Hero />
         <About />
         <CourseModes />
+        <FeaturedCourses />
       </main>
     </div>
   );
