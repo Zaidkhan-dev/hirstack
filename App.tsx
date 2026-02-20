@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
-// import { About } from './components/About';
+import { About } from './components/About';
 // import { CourseModes } from './components/CourseModes';
 // import { FeaturedCourses } from './components/FeaturedCourses';
 // import { CareerAdvisor } from './components/CareerAdvisor';
@@ -27,6 +27,7 @@ const App: React.FC = () => {
       <Navbar scrolled={scrolled} />
       <main>
         <Hero />
+        <About />
       </main>
     </div>
   );
