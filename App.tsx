@@ -8,7 +8,7 @@ import { CareerAdvisor } from './components/CareerAdvisor';
 import { Testimonials } from './components/Testimonials';
 import { Footer } from './components/Footer';
 import { CustomCursor } from './components/CustomCursor';
-import { ChatBot } from './components/ChatBot';
+// import { ChatBot } from './components/ChatBot';
 
 const App: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -33,7 +33,7 @@ const App: React.FC = () => {
         <CareerAdvisor />
         <Testimonials />
       </main>
-      <ChatBot />
+      {/* <ChatBot /> */}
       <Footer />
     </div>
   );
