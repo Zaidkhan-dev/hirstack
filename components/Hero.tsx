@@ -1,5 +1,5 @@
 import React from 'react';
-import Orb from './Orb';
+// import Orb from './Orb';
 
 export const Hero: React.FC = () => {
   return (

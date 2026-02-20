@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Navbar } from './components/Navbar';
-import { Hero } from './components/Hero';
+// import { Hero } from './components/Hero';
 import { About } from './components/About';
 import { CourseModes } from './components/CourseModes';
 import { FeaturedCourses } from './components/FeaturedCourses';
@@ -26,7 +26,7 @@ const App: React.FC = () => {
       <CustomCursor />
       <Navbar scrolled={scrolled} />
       <main>
-        <Hero />
+        {/* <Hero /> */}
         <About />
         <CourseModes />
         <FeaturedCourses />
