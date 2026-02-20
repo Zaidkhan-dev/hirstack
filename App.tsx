@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
-// import { CourseModes } from './components/CourseModes';
+import { CourseModes } from './components/CourseModes';
 // import { FeaturedCourses } from './components/FeaturedCourses';
 // import { CareerAdvisor } from './components/CareerAdvisor';
 // import { Testimonials } from './components/Testimonials';
@@ -28,6 +28,7 @@ const App: React.FC = () => {
       <main>
         <Hero />
         <About />
+        <CourseModes />
       </main>
     </div>
   );
