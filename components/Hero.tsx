@@ -7,12 +7,12 @@ export const Hero: React.FC = () => {
       {/* Primary Background Layer: Interactive Orb */}
       <div className="absolute inset-0 z-0 flex items-center justify-center opacity-90 pointer-events-auto">
         <div className="w-full h-full lg:w-[130%] lg:h-[130%] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-          <Orb 
+          {/* <Orb 
             hue={275} 
             hoverIntensity={0.8} 
             rotateOnHover={true}
             backgroundColor="#020617"
-          />
+          /> */}
         </div>
       </div>
 
